@@ -3,13 +3,15 @@ import { CommonModule } from '@angular/common';
 import { MenuComponent } from './components/menu/menu.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PrimengModule } from '../primeng/primeng.module';
+import { ItemsSidebarComponent } from './components/items-sidebar/items-sidebar.component';
 
 
 
 @NgModule({
   declarations: [
     MenuComponent,
-    FooterComponent
+    FooterComponent,
+    ItemsSidebarComponent
   ],
   imports: [
     CommonModule,
@@ -17,7 +19,8 @@ import { PrimengModule } from '../primeng/primeng.module';
   ],
   exports:[
     MenuComponent,
-    FooterComponent
+    FooterComponent,
+    ItemsSidebarComponent
   ]
 })
 export class SharedModule { }

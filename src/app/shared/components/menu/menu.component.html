@@ -1,4 +1,8 @@
-
-<div class="card">
-  <p-menubar [model]="items"></p-menubar>
-</div>
+<p-menubar >
+  <ng-template pTemplate="start">
+    <p-button (click)="changeSidebarVisibility()" icon="pi pi-bars" styleClass="p-button-rounded p-button-secondary p-button-text p-button-raised"></p-button>
+  </ng-template>
+  <ng-template pTemplate="end">
+    <img src="https://envri.eu/wp-content/uploads/2016/08/software-developer-copy.jpg" height="40" class="mr-2" />
+  </ng-template>
+</p-menubar>

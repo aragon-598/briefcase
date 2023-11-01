@@ -1,0 +1,10 @@
+<shared-menu (sidebarVisibleEmitter)="changeSidebarVisible($event)"></shared-menu>
+
+<div class="card flex">
+  <p-sidebar  [(visible)]="sidebarVisible" styleClass="w-15rem">
+    <shared-items-sidebar></shared-items-sidebar>
+  </p-sidebar>
+</div>
+<div class="p-3">
+  <router-outlet></router-outlet>
+</div>
