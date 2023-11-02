@@ -11,6 +11,11 @@ import { MenuModule } from 'primeng/menu';
 import { PanelMenuModule } from 'primeng/panelmenu';
 import { SlideMenuModule } from 'primeng/slidemenu';
 import { InputTextModule } from 'primeng/inputtext';
+import { ImageModule } from 'primeng/image';
+import { CarouselModule } from 'primeng/carousel';
+import { TagModule } from 'primeng/tag';
+import { BadgeModule } from 'primeng/badge';
+import { TimelineModule } from 'primeng/timeline';
 
 
 
@@ -32,7 +37,12 @@ import { InputTextModule } from 'primeng/inputtext';
     MenuModule,
     PanelMenuModule,
     SlideMenuModule,
-    InputTextModule
+    InputTextModule,
+    ImageModule,
+    CarouselModule,
+    TagModule,
+    BadgeModule,
+    TimelineModule
   ]
 })
 export class PrimengModule { }

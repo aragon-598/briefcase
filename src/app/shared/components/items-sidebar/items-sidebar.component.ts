@@ -44,9 +44,10 @@ export class ItemsSidebarComponent {
                   separator: true
               },
               {
-                  label: 'Export',
-                  icon: 'pi pi-fw pi-external-link',
-                  routerLink:'./profile'
+                  label: 'Projects',
+                  icon: 'pi pi-fw pi-briefcase',
+                  routerLink:'./profile',
+                  disabled:true
               }
           ]
       }

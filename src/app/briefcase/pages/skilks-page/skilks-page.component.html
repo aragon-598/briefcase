@@ -1,1 +1,13 @@
-<p>skilks-page works!</p>
+
+<div class="grid">
+  <div class="col-12 md:col-3" *ngFor="let skill of skills" id="card">
+    <p-card class="surface-border border-round fadein animation-duration-1000 shadow-2" [header]="skill.header" [subheader]="skill.subheader" >
+        <ng-template pTemplate="header">
+            <img [alt]="skill.header" [src]="skill.img" />
+        </ng-template>
+        <p>
+            {{skill.description}}
+        </p>
+    </p-card>
+  </div>
+</div>

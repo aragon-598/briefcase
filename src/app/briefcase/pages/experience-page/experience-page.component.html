@@ -1,1 +1,49 @@
-<p>experience-page works!</p>
+
+<div class="card hide-timeline fadein animation-duration-1000 shadow-2">
+  <p-timeline [value]="exps" align="alternate" styleClass="customized-timeline">
+      <ng-template pTemplate="marker" let-exp>
+          <span class="custom-marker shadow-2" [style.backgroundColor]="exp.color">
+              <i [ngClass]="exp.icon"></i>
+          </span>
+      </ng-template>
+      <ng-template pTemplate="content" let-exp>
+          <p-card [header]="exp.workPosition" [subheader]="exp.workPlace">
+              <img *ngIf="exp.image" [src]="exp.img" [alt]="exp.workPlace" width="200" class="shadow-2" />
+              <div class="card ">
+                <ul *ngFor="let description of exp.descriptions">
+                  <li>{{description}}</li>
+                </ul>
+              </div>
+              <p-badge class="p-1"
+                    value="{{exp.startDate | date:'MMMM dd, yyyy'}} - {{ !exp.endDate ?'Presente': exp.endDate | date:'MMMM dd, yyyy'}}"></p-badge>
+          </p-card>
+      </ng-template>
+  </p-timeline>
+</div>
+
+<div class="justify-content-center hide fadein animation-duration-1000 shadow-2" *ngFor="let exp of exps">
+  <div class="col-12 md:col-8" id="card">
+    <p-panel class="centered">
+      <ng-template pTemplate="header"> <span
+          class="text-primary font-semibold text-xl">{{exp.workPosition}}</span></ng-template>
+      <div class="flex align-items-center flex-wrap">
+        <h3> <strong>Empresa:</strong> {{exp.workPlace}} </h3>
+        <span></span>
+        <div class="card flex justify-content-center p-2">
+          <p-image [src]="exp.img" alt="Image" width="150"
+            [preview]="true"></p-image>
+        </div>
+      </div>
+      <hr>
+      <div class="card ">
+        <ul *ngFor="let description of exp.descriptions">
+          <li>{{description}}</li>
+        </ul>
+      </div>
+      <ng-template pTemplate="footer">
+        <p-badge class="p-1"
+          value="{{exp.startDate | date:'MMMM dd, yyyy'}} - {{ !exp.endDate ?'Presente': exp.endDate | date:'MMMM dd, yyyy'}}"></p-badge>
+      </ng-template>
+    </p-panel>
+  </div>
+</div>
