@@ -16,6 +16,10 @@ import { CarouselModule } from 'primeng/carousel';
 import { TagModule } from 'primeng/tag';
 import { BadgeModule } from 'primeng/badge';
 import { TimelineModule } from 'primeng/timeline';
+import { AvatarModule } from 'primeng/avatar';
+import { AvatarGroupModule } from 'primeng/avatargroup';
+import { ScrollTopModule } from 'primeng/scrolltop';
+import { DataViewModule } from 'primeng/dataview';
 
 
 
@@ -42,7 +46,11 @@ import { TimelineModule } from 'primeng/timeline';
     CarouselModule,
     TagModule,
     BadgeModule,
-    TimelineModule
+    TimelineModule,
+    AvatarModule,
+    AvatarGroupModule,
+    ScrollTopModule,
+    DataViewModule
   ]
 })
 export class PrimengModule { }

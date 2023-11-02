@@ -1,1 +1,29 @@
-<p>education-page works!</p>
+
+<div class="card">
+  <p-dataView #dv [value]="educationList" class="fadein animation-duration-1000 shadow-2">
+      <ng-template let-education pTemplate="listItem">
+          <div class="col-12">
+              <div class="flex flex-column xl:flex-row xl:align-items-start p-4 gap-4">
+                  <img class="w-9 sm:w-16rem xl:w-10rem shadow-2 block xl:block mx-auto border-round" [src]="education.img | checkImg" />
+                  <div class="flex flex-column sm:flex-row justify-content-between align-items-center xl:align-items-start flex-1 gap-4">
+                      <div class="flex flex-column align-items-center sm:align-items-start gap-3">
+                          <div class="text-2xl font-bold text-900">{{ education.career }}</div>
+                          <p-badge class="p-1"
+                            value="{{education.startDate | date:'MMMM dd, yyyy'}} - {{ !education.endDate ?'Presente': education.endDate | date:'MMMM dd, yyyy'}}"></p-badge>
+                          <div class="flex align-items-center gap-3">
+                              <span class="flex align-items-center gap-2">
+                                  <i class="pi pi-book"></i>
+                                  <span class="font-semibold">{{ education.school }}</span>
+                              </span>
+                              <p-tag [severity]="education.state ?'success':'warning'" [value]="education.state ?'Finished':'En curso'"></p-tag>
+                          </div>
+                      </div>
+                      <div class="flex sm:flex-column align-items-center sm:align-items-end gap-3 sm:gap-2">
+                          <span class="text-2xl font-semibold">{{education.startDate.getFullYear() }}</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </ng-template>
+  </p-dataView>
+</div>

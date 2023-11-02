@@ -4,6 +4,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PrimengModule } from '../primeng/primeng.module';
 import { ItemsSidebarComponent } from './components/items-sidebar/items-sidebar.component';
+import { CheckImgPipe } from './pipes/check-img.pipe';
 
 
 
@@ -11,7 +12,8 @@ import { ItemsSidebarComponent } from './components/items-sidebar/items-sidebar.
   declarations: [
     MenuComponent,
     FooterComponent,
-    ItemsSidebarComponent
+    ItemsSidebarComponent,
+    CheckImgPipe
   ],
   imports: [
     CommonModule,
@@ -20,7 +22,8 @@ import { ItemsSidebarComponent } from './components/items-sidebar/items-sidebar.
   exports:[
     MenuComponent,
     FooterComponent,
-    ItemsSidebarComponent
+    ItemsSidebarComponent,
+    CheckImgPipe
   ]
 })
 export class SharedModule { }
