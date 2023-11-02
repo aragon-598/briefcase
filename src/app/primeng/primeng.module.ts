@@ -20,6 +20,7 @@ import { AvatarModule } from 'primeng/avatar';
 import { AvatarGroupModule } from 'primeng/avatargroup';
 import { ScrollTopModule } from 'primeng/scrolltop';
 import { DataViewModule } from 'primeng/dataview';
+import { ToastModule } from 'primeng/toast';
 
 
 
@@ -50,7 +51,8 @@ import { DataViewModule } from 'primeng/dataview';
     AvatarModule,
     AvatarGroupModule,
     ScrollTopModule,
-    DataViewModule
+    DataViewModule,
+    ToastModule
   ]
 })
 export class PrimengModule { }

@@ -9,6 +9,8 @@ import { ExperiencePageComponent } from './pages/experience-page/experience-page
 import { SocialMediaPageComponent } from './pages/social-media-page/social-media-page.component';
 import { EducationPageComponent } from './pages/education-page/education-page.component';
 import { BriefCaseRoutingModule } from './briefcase-routing.module';
+import { ProjectsPageComponent } from './pages/projects-page/projects-page.component';
+import { MessageService } from 'primeng/api';
 
 
 
@@ -20,6 +22,7 @@ import { BriefCaseRoutingModule } from './briefcase-routing.module';
     ExperiencePageComponent,
     SocialMediaPageComponent,
     EducationPageComponent,
+    ProjectsPageComponent,
   ],
   imports: [
     BriefCaseRoutingModule,
@@ -28,6 +31,9 @@ import { BriefCaseRoutingModule } from './briefcase-routing.module';
     SharedModule
   ],exports:[
     ProfilePageComponent
+  ],
+  providers:[
+    MessageService
   ]
 })
 export class BriefcaseModule { }

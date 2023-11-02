@@ -6,6 +6,7 @@ import { SkilksPageComponent } from './pages/skilks-page/skilks-page.component';
 import { ExperiencePageComponent } from './pages/experience-page/experience-page.component';
 import { EducationPageComponent } from './pages/education-page/education-page.component';
 import { SocialMediaPageComponent } from './pages/social-media-page/social-media-page.component';
+import { ProjectsPageComponent } from './pages/projects-page/projects-page.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
       {
         path:'social-media',
         component:SocialMediaPageComponent
+      },
+      {
+        path:'projects',
+        component:ProjectsPageComponent
       },
       {
         path:'**',
