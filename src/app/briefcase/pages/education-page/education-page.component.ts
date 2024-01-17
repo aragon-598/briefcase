@@ -15,7 +15,7 @@ export class EducationPageComponent {
       state:false,
       startDate: new Date("2017-02-06"),
       endDate:undefined,
-      img:undefined
+      img:"assets/img/graduated_letter.jpg"
     },
     {
       career:"Python data structures",
@@ -60,10 +60,10 @@ export class EducationPageComponent {
     {
       career:"Angular de cero a experto - Edición 2023",
       school:"DevTalles - Fernando Herrera",
-      state:false,
+      state:true,
       startDate: new Date("2023-06-26"),
-      endDate:undefined,
-      img:undefined
+      endDate:new Date("2024-01-27"),
+      img:"assets/img/angular_devtalles.jpg"
     }
   ]
 

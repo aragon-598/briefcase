@@ -8,8 +8,8 @@ import { MessageService } from 'primeng/api';
 })
 export class ProfilePageComponent {
 
-  public firtsname:string = 'Alejandro Jose'
-  public lastname:string = 'Aragon Rugamas'
+  public firtsname:string = 'Alejandro'
+  public lastname:string = 'Aragon'
   public country:string = 'El Salvador'
   public work:string = 'Lifemiles'
   public job:string = 'Software Developer'
@@ -23,11 +23,11 @@ export class ProfilePageComponent {
 
   show(type:number) {
     if(type===1){
-      this.messageService.add({ severity: 'success', summary: 'Hi', detail: `Hola mi nombre es ${this.firtsname} ${this.lastname} que gusto que estés acá!!` });
+      this.messageService.add({ severity: 'success', summary: 'Hi', detail: `Hola mi nombre es ${this.firtsname} ${this.lastname}` });
       return;
     }
 
-    this.messageService.add({ severity: 'info', summary: 'Thank you', detail: 'Gracias por ver mi portafolio!!' });
+    this.messageService.add({ severity: 'info', summary: 'Thank you', detail: 'Gracias por visitar!!' });
 }
 
 }
